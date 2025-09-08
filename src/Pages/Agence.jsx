@@ -54,7 +54,6 @@ const imageArray = [
   gsap.to(imageDivRef.current,{
     scrollTrigger:{
       trigger:imageDivRef.current,
-      markers:true,
       start:'top 39%',
       end:"top -70%",
       scrub:true,
