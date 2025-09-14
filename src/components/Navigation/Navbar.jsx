@@ -1,10 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { NavbarContext } from "../../context/NavContext";
 
 const Navbar = () => {
 
+ const [navOpen, setNavOpen] = useContext(NavbarContext)
 
   const [isHover, setIsHover] = useState(false);
 
+  console.log(navOpen);
+  
   return (
     <div className="flex fixed  top-0 w-full items-start justify-between z-4">
       <div className="w-36 p-3">
@@ -22,11 +26,14 @@ const Navbar = () => {
       </div>
 
       <div
+      onClick={()=>{
+       setNavOpen(true)
+      }}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        className="relative h-14 w-[16vw]"
+        className="relative cursor-pointer h-14 w-[16vw]"
       >
-        <div className="bg-black h-full flex flex-col gap-1 px-5  items-end justify-center w-full">
+        <div className="bg-black  h-full flex flex-col gap-1 px-5  items-end justify-center w-full">
           <div
             className={`h-[2px] w-14 ${
               isHover ? "bg-gray-700 " : "bg-white"
