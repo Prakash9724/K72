@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 
 const Navbar = () => {
-  const navGreenRef = useRef(null);
 
-  const [isHover, setIsHover] = useState(false)
+
+  const [isHover, setIsHover] = useState(false);
 
   return (
     <div className="flex fixed  top-0 w-full items-start justify-between z-4">
@@ -21,23 +21,28 @@ const Navbar = () => {
         </svg>
       </div>
 
-
-
       <div
-        onMouseEnter={() => (setIsHover(true))}
-        onMouseLeave={() => (setIsHover(false))}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
         className="relative h-14 w-[16vw]"
       >
         <div className="bg-black h-full flex flex-col gap-1 px-5  items-end justify-center w-full">
-            <div className={`h-[2px] w-14 ${isHover ? "bg-gray-700": 'bg-white'} z-30`}></div>
-            <div className={`h-[2px] w-7 ${isHover? "bg-gray-700": 'bg-white'} z-30`}></div>
+          <div
+            className={`h-[2px] w-14 ${
+              isHover ? "bg-gray-700 " : "bg-white"
+            } z-30`}
+          ></div>
+          <div
+            className={`h-[2px] w-7 ${
+              isHover ? "bg-gray-700" : "bg-white"
+            } z-30`}
+          ></div>
         </div>
         <div
-          
-          className={`bg-[#D3FD50] top-0 transition-all absolute ${isHover ? 'h-full' : 'h-0'} w-full`}
-        >
-            
-        </div>
+          className={`bg-[#D3FD50] top-0 transition-all absolute ${
+            isHover ? "h-full" : "h-0"
+          } w-full`}
+        ></div>
       </div>
     </div>
   );
