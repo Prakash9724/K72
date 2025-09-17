@@ -8,23 +8,6 @@ const Agence = () => {
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
 
-  //  const imageArray = [
-  //   'https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/Lawrence_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/Michele_480X640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/MEL_480X640-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/CAMILLE_480X640_2-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/MAXIME_480X640_2-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/MEGGIE_480X640_2-480x640.jpg',
-  //   'https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg',
-  // ]
-
   const imageArray = [
     "/images/Carl_480x640-480x640.jpg",
     "/images/Olivier_480x640-480x640.jpg",
@@ -48,7 +31,6 @@ const Agence = () => {
         trigger: imageDivRef.current,
         start: "top 39%",
         end: "top -70%",
-        scrub: true,
         pin: true,
         pinSpacer:true,
         pinReparent:true,
@@ -57,59 +39,41 @@ const Agence = () => {
         anticipatePin:1,
         invalidateOnRefresh:true,
         onUpdate: (e) => {
-          let imageIndex;
+          const imageIndex = Math.min(Math.floor(e.progress * imageArray.length), imageArray.length-1);
 
-          if (e.progress < 1) {
-            imageIndex = Math.round(e.progress * imageArray.length);
-          } else {
-            imageIndex = imageArray.length - 1;
+          console.log("Scroll Progress:", e.progress);
+          console.log("Calculated Image Index:", imageIndex);
+          console.log("Image Array Length:", imageArray.length);
+          console.log("Image Source to be set:", imageArray[imageIndex]);
+          
+          if(imageRef.current && imageArray[imageIndex]){
+            imageRef.current.src = imageArray[imageIndex];
           }
-
-          imageRef.current.src = imageArray[imageIndex];
         },
       },
     });
   });
 
   return (
-    <div className="bg-black">
-      <div className="section1 py-1">
-        <div
-          ref={imageDivRef}
-          className="h-[18vw] w-[15vw] overflow-hidden rounded-4xl  absolute top-96 left-[30vw]"
-        >
-          <img
-            ref={imageRef}
-            className="h-full w-full object-cover"
-            src="https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg"
-            alt=""
-          />
+    <div className='parent'>
+      <div id='page1' className='py-1 '>
+        <div ref={imageDivRef} className='absolute overflow-hidden lg:h-[20vw] h-[30vw] lg:rounded-3xl rounded-xl lg:w-[15vw] w-[25vw] lg:top-96 -top-80 lg:left-[30vw] left-[30vw]'>
+          <img ref={imageRef} className='h-full object-cover w-full' src={imageArray[0]} alt="" />
         </div>
-
-        <div className="font-[font2] relative">
-          <div className=" mt-[55vh]">
-            <h1 className="text-[19vw] leading-[18vw] uppercase text-center">
-              Soixan7e <br /> Douze
-            </h1>
+        <div className='relative font-[font2]'>
+          <div className='lg:mt-[55vh] mt-[30vh]'>
+            <h1 className='text-[20vw] text-center uppercase leading-[18vw]'>Soixan7e <br />
+              Douze</h1>
           </div>
-
-          <div className="pl-[50%] mt-20">
-            <p className="text-5xl ">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notre curiosité
-              nourrit notre créativité. On reste humbles et on dit non aux gros
-              egos, même le vôtre. Une marque est vivante. Elle a des valeurs,
-              une personnalité, une histoire. Si on oublie ça, on peut faire de
-              bons chiffres à court terme, mais on la tue à long terme. C’est
-              pour ça qu’on s’engage à donner de la perspective, pour bâtir des
-              marques influentes.
-            </p>
+          <div className='lg:pl-[40%] lg:mt-20 mt-4 p-3'>
+            <p className='lg:text-6xl text-xl leading-tight'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Notre curiosité nourrit notre créativité. On reste humbles et on dit non aux gros egos, même le vôtre. Une marque est vivante. Elle a des valeurs, une personnalité, une histoire. Si on oublie ça, on peut faire de bons chiffres à court terme, mais on la tue à long terme. C’est pour ça qu’on s’engage à donner de la perspective, pour bâtir des marques influentes.</p>
           </div>
         </div>
       </div>
+      <div id='page2' className=" h-screen">
 
-      <div className="section2 h-screen"></div>
+      </div>
     </div>
-  );
-};
-
+  )
+}
 export default Agence;
