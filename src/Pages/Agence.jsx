@@ -71,7 +71,6 @@ const Agence = () => {
         </div>
       </div>
       <div id='page2' className=" h-screen">
-
       </div>
     </div>
   )

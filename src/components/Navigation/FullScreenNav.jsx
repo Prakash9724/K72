@@ -163,13 +163,13 @@ const FullScreenNav = () => {
                 Agence
               </h1>
               <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
-                <div className="moveX flex items-center">
+                <div className="moveX flex items-center ">
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
                     Pour Tout voir
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
+                    src="https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
@@ -177,7 +177,7 @@ const FullScreenNav = () => {
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
+                    src="https://images.unsplash.com/photo-1757060584191-51193524be5d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                 </div>
@@ -215,7 +215,7 @@ const FullScreenNav = () => {
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
+                    src="https://plus.unsplash.com/premium_photo-1757392183265-0ee665cc9fbe?q=80&w=1397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
@@ -223,7 +223,7 @@ const FullScreenNav = () => {
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
+                    src="https://images.unsplash.com/photo-1757330010718-8b6812cc9c5a?q=80&w=1466&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                 </div>
@@ -248,6 +248,8 @@ const FullScreenNav = () => {
               </div>
             </div>
           </Link>
+
+
           <Link to="blogs" onClick={() => setNavOpen(false)}>
             <div className="link origin-top relative border-y-1 border-white cursor-pointer">
               <h1 className="font-[font2] text-5xl lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
@@ -256,11 +258,11 @@ const FullScreenNav = () => {
               <div className="moveLink absolute text-black flex top-0 bg-[#D3FD50]">
                 <div className="moveX flex items-center">
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
-                    Pour Tout voir
+                   Explore More Content
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
+                    src="https://plus.unsplash.com/premium_photo-1757100707909-705bdc2a60e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
@@ -278,7 +280,7 @@ const FullScreenNav = () => {
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---MenuThumbnail-640x290.jpg"
+                    src="https://plus.unsplash.com/premium_photo-1664300131035-483c9a92267b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                   <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5xl  text-center lg:leading-[0.8] lg:pt-10 pt-4 uppercase">
@@ -286,7 +288,7 @@ const FullScreenNav = () => {
                   </h2>
                   <img
                     className="lg:h-36 h-14 rounded-full shrink-0 lg:w-96 w-32 object-cover"
-                    src="https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290-640x290.jpg"
+                    src="https://images.unsplash.com/photo-1756990683708-afd38ed20f1f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt=""
                   />
                 </div>
